@@ -14,7 +14,7 @@ public class EnableDisableLightProbes : MonoBehaviour
 			if ( r.name.ToLower ().Contains ( "reference" ) )
 				continue;
 			
-			if ( GameObjectUtility.AreStaticEditorFlagsSet ( r.gameObject, StaticEditorFlags.LightmapStatic ) )
+			if ( GameObjectUtility.AreStaticEditorFlagsSet ( r.gameObject, StaticEditorFlags.ContributeGI ) )
 				r.lightProbeUsage = UnityEngine.Rendering.LightProbeUsage.Off;
 			else
 				r.lightProbeUsage = UnityEngine.Rendering.LightProbeUsage.BlendProbes;

@@ -29,8 +29,8 @@ public class WalkerController : IRobotController
 	public float cameraMaxFOV;
 	public float cameraDefaultFOV = 60;
 
-	public PhysicMaterial idleMaterial;
-	public PhysicMaterial movingMaterial;
+	public PhysicsMaterial idleMaterial;
+	public PhysicsMaterial movingMaterial;
 	public LayerMask collisionMask;
 	public GameObject footprint;
 	public Transform[] feet;

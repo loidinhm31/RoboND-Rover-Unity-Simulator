@@ -26,7 +26,7 @@ public class FlyingCamera : MonoBehaviour
 //		if ( Input.GetKey ( KeyCode.LeftShift ) || Input.GetKey ( KeyCode.RightShift ) )
 			move *= sprintFactor;
 		move = transform.TransformDirection ( move );
-		rb.velocity = move * moveSpeed;
+		rb.linearVelocity = move * moveSpeed;
 //		rb.MovePosition ( transform.position + move * moveSpeed * Time.deltaTime );
 //		rb.AddForce ( move * moveSpeed * Time.deltaTime, ForceMode.Acceleration );
 //		transform.Translate ( move * moveSpeed * Time.deltaTime, Space.Self );

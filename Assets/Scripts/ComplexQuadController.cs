@@ -76,8 +76,8 @@ public class ComplexQuadController : MonoBehaviour
 //			zAngle += 360;
 //		transform.Rotate ( Vector3.up * -zAngle * Time.deltaTime, Space.World );
 
-		Vector3 velo = Vector3.ClampMagnitude ( rb.velocity, moveSpeed );
-		rb.velocity = velo;
+		Vector3 velo = Vector3.ClampMagnitude ( rb.linearVelocity, moveSpeed );
+		rb.linearVelocity = velo;
 	}
 
 	// apply thrust
@@ -92,6 +92,6 @@ public class ComplexQuadController : MonoBehaviour
 	public void ResetOrientation ()
 	{
 		transform.rotation = Quaternion.identity;
-		rb.velocity = Vector3.zero;
+		rb.linearVelocity = Vector3.zero;
 	}
 }

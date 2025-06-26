@@ -52,8 +52,8 @@ public class SimpleQuadController : MonoBehaviour
 		Vector3 inputVelo = forwardVelocity + sidewaysVelocity + upVelocity;
 
 		rb.AddRelativeForce ( inputVelo * Time.deltaTime, ForceMode.VelocityChange );
-		Vector3 velo = Vector3.ClampMagnitude ( rb.velocity, moveSpeed );
-		rb.velocity = velo;
+		Vector3 velo = Vector3.ClampMagnitude ( rb.linearVelocity, moveSpeed );
+		rb.linearVelocity = velo;
 	}
 
 	public void Steer (float thrust, float forward, float sideways)

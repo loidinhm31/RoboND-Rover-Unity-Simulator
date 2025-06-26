@@ -99,7 +99,7 @@ public class Fabrik : MonoBehaviour {
 	private void InitTransform(Transform transform, ref int id)
 	{
 		transforms_[id] = transform;
-		for(int i=0; i < transform.GetChildCount(); ++i)
+		for(int i=0; i < transform.childCount; ++i)
 		{
 			++id;
 			InitTransform(transform.GetChild(i), ref id);

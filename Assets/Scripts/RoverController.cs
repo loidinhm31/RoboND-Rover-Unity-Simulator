@@ -295,8 +295,8 @@ public class RoverController : IRobotController
         lastBrakeInput = brake;
 //		Debug.Log ( "throt: " + lastMoveInput + " brake: " + lastBrakeInput );
         isMotorInput = throttle != 0 || brake != 0;
-        if (isMotorInput && !IsPickingUpSample)
-            armActuator.enabled = false;
+        // if (isMotorInput && !IsPickingUpSample)
+        //     armActuator.enabled = false;
     }
 
     public override void Move(float input)
@@ -329,8 +329,8 @@ public class RoverController : IRobotController
             lastAngle = angle;
             lastAngle = Mathf.Clamp(lastAngle, -maxSteering, maxSteering);
             isSteeringInput = true;
-            if (!IsPickingUpSample)
-                armActuator.enabled = false;
+            // if (!IsPickingUpSample)
+            //     armActuator.enabled = false;
         }
         else
         {
@@ -355,8 +355,8 @@ public class RoverController : IRobotController
             lastAngle = anglePercent * maxSteering;
             lastAngle = Mathf.Clamp(lastAngle, -maxSteering, maxSteering);
             isSteeringInput = true;
-            if (!IsPickingUpSample)
-                armActuator.enabled = false;
+            // if (!IsPickingUpSample)
+            //     armActuator.enabled = false;
         }
         else
         {

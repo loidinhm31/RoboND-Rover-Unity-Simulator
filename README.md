@@ -2,5 +2,5 @@
 Search and Sample Return Project simulator
 
 ```shell
-repomix --include "Assets/**/*.cs,Assets/**/*.shader,README.md,*.md" --style xml --output unity-codebase.xml --top-files-len 10
+repomix --include "Assets/**/*.cs,Assets/**/*.shader,README.md,*.md" --style plain --output unity-codebase.txt --top-files-len 10
 ```
